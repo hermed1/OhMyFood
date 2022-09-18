@@ -1,0 +1,76 @@
+$primarycolor: #9356DC;
+$secondarycolor:#FF79DA; 
+$tertiartcolor: #99E2D0;
+
+@mixin fonttexts {
+    @font-face {
+        font-family: "Roboto" ;
+        src: url(Police/Roboto/Roboto-Regular.ttf);
+    }
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(Police/Roboto/Roboto-Regular.ttf);
+}
+body{
+    font-size: 12px;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    .header__logo{
+        width: 200px;
+        height: 35px;
+        }
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(235, 235, 234);
+    height: 45px;
+    font-size: 16px;
+    .form__button{
+        border: none;
+        background-color: rgb(235, 235, 234);
+        font-weight: 400;
+        font-size: inherit;
+        width: 175px;
+    }
+    .form__icon{
+        margin-right: 15px;
+    }
+}
+.presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: rgb(247, 247, 246);
+    &__h1{
+        font-size: 25px;
+        width: 100%;
+        text-align: center;
+    }
+    &__text{
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+        margin-top: 0px;
+    }
+    &__button{
+        border-radius: 25px;
+        height: 40px;
+        width: 200px;
+        color: white;
+        background: linear-gradient($secondarycolor, $primarycolor);
+        font-weight: bold;
+    }
+}
+.card__img{
+    height: 200px;
+    width: 400px;
+}
