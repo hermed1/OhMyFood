@@ -1,0 +1,16 @@
+.footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 30px 20px;
+    &__link{
+        color: inherit;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    &__icon{
+        color: #FFF;
+        margin-right: 5px;
+    }
+}

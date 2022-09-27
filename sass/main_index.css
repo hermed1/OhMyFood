@@ -1,16 +1,17 @@
+body {
+  font-size: 12px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "'Roboto', sans-serif";
+}
+
 a {
   color: black;
   text-decoration: none;
 }
 
-@font-face {
-  font-family: "Roboto";
-  src: url(Police/Roboto/Roboto-Regular.ttf);
-}
-body {
-  font-size: 12px;
-  margin: 0px;
-  box-sizing: border-box;
+h1, h2 {
+  font-weight: bolder;
 }
 
 header {
@@ -22,6 +23,7 @@ header {
 header .header__logo {
   width: 200px;
   height: 35px;
+  padding-top: 20px;
 }
 
 form {
@@ -31,6 +33,7 @@ form {
   background-color: rgb(235, 235, 234);
   height: 45px;
   font-size: 16px;
+  box-shadow: 0px 1px 5px grey;
 }
 form .form__button {
   border: none;
@@ -186,4 +189,4 @@ form .form__icon {
 .footer__icon {
   color: #FFF;
   margin-right: 5px;
-}/*# sourceMappingURL=scss.css.map */
+}/*# sourceMappingURL=main_index.css.map */
