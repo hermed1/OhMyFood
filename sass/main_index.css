@@ -47,6 +47,52 @@ header .header__returnarrow {
   left: 50px;
 }
 
+.wrapper {
+  -webkit-animation: loader 3000ms;
+          animation: loader 3000ms;
+}
+
+.loadingspinner__container {
+  display: flex;
+  height: 316px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  -webkit-animation: loaderspinner 3000ms forwards;
+          animation: loaderspinner 3000ms forwards;
+}
+
+.loadingspinner {
+  width: 50px;
+  height: 50px;
+  border: 9px dashed #9356DC;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingspinner2 {
+  width: 40px;
+  height: 40px;
+  border: 6px dashed #99E2D0;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingspinner3 {
+  width: 30px;
+  height: 30px;
+  border: 3px dashed #FF79DA;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 form {
   display: flex;
   justify-content: center;
@@ -246,6 +292,72 @@ form .form__icon {
   color: #278870;
 }
 
+/* Keyframes content loader*/
+@-webkit-keyframes loader {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0.2;
+  }
+  75% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0.2;
+  }
+  75% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*keyframes loader spinner*/
+@-webkit-keyframes loaderspinner {
+  0% {
+    opacity: 1;
+    transform: rotate(1turn);
+  }
+  33% {
+    opacity: 0.8;
+    transform: rotate(2turn);
+  }
+  75% {
+    opacity: 0.6;
+    transform: rotate(4.3turn);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(6turn);
+  }
+}
+@keyframes loaderspinner {
+  0% {
+    opacity: 1;
+    transform: rotate(1turn);
+  }
+  33% {
+    opacity: 0.8;
+    transform: rotate(2turn);
+  }
+  75% {
+    opacity: 0.6;
+    transform: rotate(4.3turn);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(6turn);
+  }
+}
 .imgrestaurant {
   width: 100%;
   height: 200px;
