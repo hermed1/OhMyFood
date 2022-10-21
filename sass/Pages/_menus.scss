@@ -87,7 +87,6 @@
         padding:0 20px;
     }
     &__button{
-        position: relative;
         width: 100%;
         background-color: #FFF;
         border-radius: 15px;
@@ -95,29 +94,85 @@
         border: transparent;
         box-shadow: 0px 0px 4px lightgrey;
         display: flex;
-        flex-direction: column;
+        align-items: center;
         padding-left: 10px;
-        padding-bottom: 5px;
         box-sizing: border-box;
+        overflow: hidden;   
+        cursor: pointer;
+        &__icon{
+        }
+        &:active > .menu__button--greenblock{ 
+            margin-right: -7px;
+            transition-duration: 500ms;
+            transition-timing-function: ease-out;
+        }
+        &:active .menu__button--greenblock__icon{
+            transform: rotate(1turn);
+            transition: transform 600ms 200ms linear;
+        }
+        &__text{ 
+            display: flex;
+            max-width: 100%;
+            flex-direction: column;
+            flex-grow: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        } 
+        &--greenblock{
+            background-color: $tertiarycolor;
+            height: 60px;
+            width: 60px;
+            border: transparent;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: -70px;
+            transform: translateX(0);
+            &__icon{
+                height: 25px;
+                width: 25px;
+                background-color: #FFF;
+                color: $tertiarycolor;
+                border-radius: 100px;
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+                transform: rotate(0turn);
+            }
+        }
     }
     &__p--bold{
         font-weight: bold;
-        margin-bottom: 0px;
-        margin-top: 10px;
+        margin: 0px;
+        flex-grow: 1;
+        display: flex;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;    
     }
     &__p--normal{
-        margin: 5px 0;
-    }
+        margin: 0;
+        display: flex;
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;    
+        text-overflow: ellipsis;
+        }
     &__price{
+        display: flex;
+        align-items: flex-end;
+        height: 36px;
+        margin: 0;
+        padding-right: 20px;
         font-weight: bold;
-        position: absolute;
-        right: 20px;
-        bottom: -2px;
-        box-sizing: border-box;
+        margin-left: 10px;
     }
 }
-$animation-duration: 500ms;
-
 .loading_menu_1{
     animation: loading_menu $animation-duration 200ms backwards;
 }

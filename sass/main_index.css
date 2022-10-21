@@ -54,13 +54,14 @@ header .header__returnarrow {
 
 .loadingspinner__container {
   display: flex;
-  height: 316px;
+  height: 200px;
   width: 100%;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   position: absolute;
   -webkit-animation: loaderspinner 3000ms forwards;
           animation: loaderspinner 3000ms forwards;
+  transform-origin: 50% 82%;
 }
 
 .loadingspinner {
@@ -447,7 +448,6 @@ form .form__icon {
   padding: 0 20px;
 }
 .menu__button {
-  position: relative;
   width: 100%;
   background-color: #FFF;
   border-radius: 15px;
@@ -455,25 +455,81 @@ form .form__icon {
   border: transparent;
   box-shadow: 0px 0px 4px lightgrey;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   padding-left: 10px;
-  padding-bottom: 5px;
   box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+}
+.menu__button:active > .menu__button--greenblock {
+  margin-right: -7px;
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+}
+.menu__button:active .menu__button--greenblock__icon {
+  transform: rotate(1turn);
+  transition: transform 600ms 200ms linear;
+}
+.menu__button__text {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu__button--greenblock {
+  background-color: #99E2D0;
+  height: 60px;
+  width: 60px;
+  border: transparent;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -70px;
+  transform: translateX(0);
+}
+.menu__button--greenblock__icon {
+  height: 25px;
+  width: 25px;
+  background-color: #FFF;
+  color: #99E2D0;
+  border-radius: 100px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(0turn);
 }
 .menu__p--bold {
   font-weight: bold;
-  margin-bottom: 0px;
-  margin-top: 10px;
+  margin: 0px;
+  flex-grow: 1;
+  display: flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu__p--normal {
-  margin: 5px 0;
+  margin: 0;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menu__price {
+  display: flex;
+  align-items: flex-end;
+  height: 36px;
+  margin: 0;
+  padding-right: 20px;
   font-weight: bold;
-  position: absolute;
-  right: 20px;
-  bottom: -2px;
-  box-sizing: border-box;
+  margin-left: 10px;
 }
 
 .loading_menu_1 {

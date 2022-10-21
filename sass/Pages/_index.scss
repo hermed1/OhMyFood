@@ -3,12 +3,14 @@
 }
 .loadingspinner__container{
     display: flex;
-    height: 316px;
+    height: 200px;
     width: 100%;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     position: absolute;
     animation: loaderspinner 3000ms forwards;
+    transform-origin: 50% 82%;
+    // ou mettre align-items center et transform-origin default
 }
 .loadingspinner{
     width: 50px;
