@@ -361,7 +361,7 @@ form .form__icon {
 }
 .imgrestaurant {
   width: 100%;
-  height: 200px;
+  height: 220px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -373,16 +373,17 @@ form .form__icon {
   flex-direction: column;
   align-items: center;
   padding: 0px 20px 40px 20px;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
   box-sizing: border-box;
   z-index: 1;
   position: relative;
-  margin-top: -55px;
+  margin-top: -46px;
 }
 .menu__title {
   box-sizing: border-box;
   margin-right: 20px;
+  margin-top: 0px;
   font-family: "Shrikhand", cursive;
 }
 .menu__icon__1 {
@@ -464,11 +465,11 @@ form .form__icon {
 .menu__button:active > .menu__button--greenblock {
   margin-right: -7px;
   transition-duration: 500ms;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease-in-out;
 }
 .menu__button:active .menu__button--greenblock__icon {
   transform: rotate(1turn);
-  transition: transform 600ms 200ms linear;
+  transition: transform 400ms 200ms ease-out;
 }
 .menu__button__text {
   display: flex;
@@ -484,8 +485,8 @@ form .form__icon {
   height: 60px;
   width: 60px;
   border: transparent;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -529,7 +530,7 @@ form .form__icon {
   margin: 0;
   padding-right: 20px;
   font-weight: bold;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .loading_menu_1 {
@@ -545,6 +546,11 @@ form .form__icon {
 .loading_menu_3 {
   -webkit-animation: loading_menu 500ms 800ms backwards;
           animation: loading_menu 500ms 800ms backwards;
+}
+
+.loading_menu_4 {
+  -webkit-animation: loading_menu 500ms 1100ms backwards;
+          animation: loading_menu 500ms 1100ms backwards;
 }
 
 @-webkit-keyframes loading_menu {
@@ -582,7 +588,7 @@ form .form__icon {
   font-weight: bold;
   box-shadow: 0px 0px 3px grey;
 }
-.order:hover {
+.order:active {
   background: linear-gradient(341deg, #a16be0 9%, #ff93e1 88%);
   box-shadow: 0px 0px 7px grey;
 }
