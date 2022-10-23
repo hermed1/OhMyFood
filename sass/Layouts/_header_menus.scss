@@ -3,16 +3,14 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
-    margin-bottom: 15px;
     position: relative;
     .header__logo{
         width: 200px;
         height: 35px;
-        padding-left: 50px;
+        padding-left: 35px;
         }
     .header__returnarrow{
         position: absolute;
-        left: 50px;
+        left: 25px;
     }    
 }

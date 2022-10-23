@@ -33,18 +33,16 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
-  margin-bottom: 15px;
   position: relative;
 }
 header .header__logo {
   width: 200px;
   height: 35px;
-  padding-left: 50px;
+  padding-left: 35px;
 }
 header .header__returnarrow {
   position: absolute;
-  left: 50px;
+  left: 25px;
 }
 
 .wrapper {
@@ -100,6 +98,7 @@ form {
   align-items: center;
   background-color: rgb(235, 235, 234);
   height: 45px;
+  padding-left: 50px;
   font-size: 16px;
   box-shadow: 0px 1px 5px grey;
 }
@@ -123,14 +122,21 @@ form .form__icon {
   padding: 20px 20px 40px 20px;
   margin-bottom: 40px;
   background-color: rgb(247, 247, 246);
+  box-shadow: 0px 1px 1px rgb(245, 244, 244);
+  box-sizing: border-box;
 }
-.presentation__h1 {
+@media screen and (min-width: 992px) {
+  .presentation {
+    margin-bottom: 10px;
+  }
+}
+.presentation__h2 {
   font-size: 25px;
   width: 100%;
   text-align: center;
 }
 .presentation__text {
-  font-size: 18px;
+  font-size: 15px;
   width: 100%;
   text-align: center;
   margin-top: 0px;
@@ -141,7 +147,7 @@ form .form__icon {
   height: 40px;
   width: 200px;
   color: white;
-  background: linear-gradient(341deg, #9356DC 9%, #FF79DA 88%);
+  background: linear-gradient(357deg, #9356DC 40%, #FF79DA 112%);
   font-weight: bold;
   box-shadow: 0px 0px 3px grey;
   cursor: pointer;
@@ -155,9 +161,27 @@ form .form__icon {
   padding: 0px 20px;
   background-color: #FFF;
   margin-bottom: 50px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 992px) {
+  .howitworks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 50px;
+  }
 }
 .howitworks__title {
   font-size: 25px;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .howitworks__title {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+  }
 }
 .howitworks__button {
   background-color: rgb(247, 247, 246);
@@ -166,6 +190,7 @@ form .form__icon {
   border-radius: 15px;
   border: 0px;
   margin-bottom: 20px;
+  margin-left: 5px;
   box-shadow: 0px 3px 15px lightgray;
   display: flex;
   justify-content: center;
@@ -174,11 +199,23 @@ form .form__icon {
   font-weight: 700;
   font-size: 14px;
 }
+@media screen and (min-width: 992px) {
+  .howitworks__button {
+    width: 30%;
+    height: 60px;
+    font-size: 16px;
+  }
+}
 .howitworks__icon {
   position: absolute;
-  left: 10%;
+  left: 8%;
   bottom: 25px;
   color: grey;
+}
+@media screen and (min-width: 992px) {
+  .howitworks__icon {
+    bottom: 31px;
+  }
 }
 .howitworks__number {
   position: absolute;
@@ -193,6 +230,14 @@ form .form__icon {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .howitworks__number {
+    width: 27px;
+    height: 27px;
+    left: -13px;
+    bottom: 7px;
+  }
 }
 
 .howitworks__button:hover {
@@ -209,18 +254,66 @@ form .form__icon {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 690px) and (max-width: 991px) {
+  .restaurants {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 50px;
+  }
+}
 .restaurants__title {
   font-size: 25px;
 }
+@media screen and (min-width: 690px) and (max-width: 991px) {
+  .restaurants__title {
+    width: 100%;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurants__title {
+    width: 100%;
+  }
+}
 .restaurants__card {
   width: 100%;
-  height: 270px;
-  margin-bottom: 20px;
+  height: 260px;
   display: flex;
   flex-direction: column;
   background-color: #FFF;
   border-radius: 15px;
   position: relative;
+  box-shadow: 0px 3px 15px lightgray;
+}
+.restaurants__card__container {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 690px) and (max-width: 991px) {
+  .restaurants__card__container {
+    width: 320px;
+    height: 260px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurants__card__container {
+    width: 47%;
+    margin-bottom: 50px;
+  }
 }
 .restaurants .card__img {
   height: 185px;
@@ -231,7 +324,7 @@ form .form__icon {
      object-fit: cover;
 }
 .restaurants .card__title {
-  margin-top: 20px;
+  margin-top: 15px;
   margin-bottom: 0px;
   font-size: 17px;
   padding-left: 10px;
@@ -244,10 +337,10 @@ form .form__icon {
 .restaurants .card__icon {
   color: black;
   position: absolute;
-  bottom: 0px;
-  right: -5px;
-  width: 50px;
-  height: 50px;
+  bottom: 13px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
   z-index: 10;
   opacity: 1;
   transition: opacity 250ms;
@@ -261,13 +354,13 @@ form .form__icon {
 }
 .restaurants .card__icon2 {
   position: absolute;
-  bottom: 25px;
-  right: 8px;
-  background-image: linear-gradient(341deg, #9356DC 9%, #FF79DA 88%);
+  bottom: 28px;
+  right: 18px;
+  background-image: linear-gradient(350deg, #9356DC 5%, #FF79DA 85%);
   background-clip: text;
   -webkit-background-clip: text;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   color: transparent;
   display: flex;
   align-items: center;
@@ -372,27 +465,30 @@ form .form__icon {
   width: 100%;
   flex-direction: column;
   align-items: center;
-  padding: 0px 20px 40px 20px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  padding-bottom: 20px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
   box-sizing: border-box;
   z-index: 1;
   position: relative;
-  margin-top: -46px;
+  margin-top: -50px;
 }
 .menu__title {
   box-sizing: border-box;
-  margin-right: 20px;
-  margin-top: 0px;
+  margin-right: 30px;
+  padding-top: 10px;
+  padding-left: 5px;
+  font-style: italic;
+  font-size: 25px;
   font-family: "Shrikhand", cursive;
 }
 .menu__icon__1 {
   color: black;
   position: absolute;
-  bottom: -20px;
-  right: 15px;
-  width: 50px;
-  height: 50px;
+  bottom: 3px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
   z-index: 10;
   opacity: 1;
   transition: opacity 250ms;
@@ -406,13 +502,13 @@ form .form__icon {
 }
 .menu__icon__2 {
   position: absolute;
-  bottom: 5px;
-  right: 27px;
-  background-image: linear-gradient(341deg, #9356DC 9%, #FF79DA 88%);
+  bottom: 17px;
+  right: 33px;
+  background-image: linear-gradient(350deg, #9356DC 5%, #FF79DA 85%);
   background-clip: text;
   -webkit-background-clip: text;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   color: transparent;
   display: flex !important;
   align-items: center;
@@ -436,7 +532,6 @@ form .form__icon {
   box-sizing: border-box;
   align-items: center;
   width: 100%;
-  padding-right: 20px;
   padding: 0 20px;
   position: relative;
 }
@@ -506,7 +601,8 @@ form .form__icon {
 }
 .menu__p--bold {
   font-weight: bold;
-  margin: 0px;
+  margin-top: 0px;
+  margin-bottom: 3px;
   flex-grow: 1;
   display: flex;
   overflow: hidden;
@@ -577,7 +673,7 @@ form .form__icon {
   }
 }
 .order {
-  background: linear-gradient(341deg, #9356DC 9%, #FF79DA 88%);
+  background: linear-gradient(350deg, #9356DC 5%, #FF79DA 85%);
   color: #FFF;
   border-radius: 25px;
   width: 200px;
@@ -599,18 +695,38 @@ form .form__icon {
 }
 
 .footer {
-  background-color: black;
+  background-color: rgb(30, 30, 30);
   color: white;
   display: flex;
   flex-direction: column;
   padding: 0 20px 30px 20px;
+  font-style: italic;
+}
+@media screen and (min-width: 992px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 40px 55px;
+  }
 }
 .footer__link {
   color: inherit;
   font-size: 15px;
   margin-bottom: 5px;
 }
+@media screen and (min-width: 992px) {
+  .footer__link {
+    font-size: 18px;
+  }
+}
 .footer__icon {
   color: #FFF;
   margin-right: 5px;
+}
+@media screen and (min-width: 992px) {
+  .footer h1 {
+    font-size: 25px;
+    margin: 0;
+  }
 }/*# sourceMappingURL=main_index.css.map */

@@ -1,16 +1,32 @@
 .footer{
-    background-color: black;
+    background-color: rgb(30, 30, 30);
     color: white;
     display: flex;
     flex-direction: column;
-    padding: 0 20px 30px 20px;
+    padding: 0 20px 30px 20px;      
+    font-style: italic;
+    @media screen and (min-width: 992px) {
+     flex-direction: row;
+     justify-content: space-between;   
+     align-items: baseline;
+     padding: 40px 55px;
+    }
     &__link{
         color: inherit;
         font-size: 15px;
         margin-bottom: 5px;
+        @media screen and (min-width: 992px) {
+        font-size: 18px;    
+        }
     }
     &__icon{
         color: #FFF;
         margin-right: 5px;
+    }
+    h1{
+        @media screen and (min-width: 992px) {
+        font-size: 25px;
+        margin: 0;
+        }
     }
 }
