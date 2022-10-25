@@ -40,14 +40,26 @@ header .header__logo {
   height: 35px;
   padding-left: 35px;
 }
+@media screen and (min-width: 690px) and (max-width: 991px) {
+  header .header__logo {
+    width: 240px;
+    height: 45px;
+  }
+}
+@media screen and (min-width: 992px) {
+  header .header__logo {
+    height: 55px;
+    width: 280px;
+  }
+}
 header .header__returnarrow {
   position: absolute;
   left: 25px;
 }
 
 .wrapper {
-  -webkit-animation: loader 3000ms;
-          animation: loader 3000ms;
+  -webkit-animation: loader 3500ms;
+          animation: loader 3500ms;
 }
 
 .loadingspinner__container {
@@ -151,10 +163,17 @@ form .form__icon {
   font-weight: bold;
   box-shadow: 0px 0px 3px grey;
   cursor: pointer;
-  box-shadow: 0px 0px 7px grey;
 }
-.presentation__button:hover {
+.presentation__button:active {
   background: linear-gradient(341deg, #a16be0 9%, #ff93e1 88%);
+  box-shadow: 0px 0px 10px grey;
+}
+@media screen and (min-width: 992px) {
+  .presentation__button:hover {
+    background: linear-gradient(341deg, #a16be0 9%, #ff93e1 88%);
+    box-shadow: 0px 0px 10px grey;
+    transition: all 1s;
+  }
 }
 
 .howitworks {
@@ -199,11 +218,31 @@ form .form__icon {
   font-weight: 700;
   font-size: 14px;
 }
+.howitworks__button:active {
+  background-color: rgb(244, 237, 254);
+}
+.howitworks__button:active > .howitworks__icon {
+  color: #9356DC;
+}
 @media screen and (min-width: 992px) {
   .howitworks__button {
     width: 30%;
     height: 60px;
     font-size: 16px;
+  }
+  .howitworks__button:hover {
+    background-color: rgb(244, 237, 254);
+    transform: scale(1.1);
+    transition: all 800ms ease-in-out;
+  }
+  .howitworks__button:hover > .howitworks__icon {
+    transform: rotate(1turn);
+    color: #782cd3;
+    transition: all 1s 300ms;
+  }
+  .howitworks__button:hover > .howitworks__number {
+    transform: rotate(1turn);
+    transition: transform 1s 300ms;
   }
 }
 .howitworks__icon {
@@ -238,14 +277,6 @@ form .form__icon {
     left: -13px;
     bottom: 7px;
   }
-}
-
-.howitworks__button:hover {
-  background-color: rgb(244, 237, 254);
-}
-
-.howitworks__button:hover .howitworks__icon {
-  color: #9356DC;
 }
 
 .restaurants {
@@ -323,6 +354,15 @@ form .form__icon {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media screen and (min-width: 992px) {
+  .restaurants .card__img:hover + .restaurants__newtag {
+    transform: scale(1.25);
+    transition: all 1s ease-out;
+    color: #e8f9f5;
+    background-color: #4acbab;
+    text-shadow: 3px 3px 8px #99E2D0;
+  }
+}
 .restaurants .card__title {
   margin-top: 15px;
   margin-bottom: 0px;
@@ -392,10 +432,13 @@ form .form__icon {
     opacity: 0;
   }
   33% {
+    opacity: 0.1;
+  }
+  50% {
     opacity: 0.2;
   }
   75% {
-    opacity: 0.6;
+    opacity: 0.4;
   }
   100% {
     opacity: 1;
@@ -406,10 +449,13 @@ form .form__icon {
     opacity: 0;
   }
   33% {
+    opacity: 0.1;
+  }
+  50% {
     opacity: 0.2;
   }
   75% {
-    opacity: 0.6;
+    opacity: 0.4;
   }
   100% {
     opacity: 1;
@@ -472,6 +518,15 @@ form .form__icon {
   z-index: 1;
   position: relative;
   margin-top: -50px;
+}
+@media screen and (min-width: 992px) {
+  .menu {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 20px 50px;
+  }
 }
 .menu__title {
   box-sizing: border-box;
@@ -543,6 +598,11 @@ form .form__icon {
   margin-bottom: 15px;
   padding: 0 20px;
 }
+@media screen and (min-width: 992px) {
+  .menu__part {
+    width: 33%;
+  }
+}
 .menu__button {
   width: 100%;
   background-color: #FFF;
@@ -551,14 +611,18 @@ form .form__icon {
   border: transparent;
   box-shadow: 0px 0px 4px lightgrey;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding-left: 10px;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   box-sizing: border-box;
   overflow: hidden;
   cursor: pointer;
 }
 .menu__button:active > .menu__button--greenblock {
-  margin-right: -7px;
+  margin-right: 0px;
   transition-duration: 500ms;
   transition-timing-function: ease-in-out;
 }
@@ -566,14 +630,22 @@ form .form__icon {
   transform: rotate(1turn);
   transition: transform 400ms 200ms ease-out;
 }
+@media screen and (min-width: 992px) {
+  .menu__button:hover > .menu__button--greenblock {
+    margin-right: 0px;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+  }
+  .menu__button:hover .menu__button--greenblock__icon {
+    transform: rotate(1turn);
+    transition: transform 400ms 200ms ease-out;
+  }
+}
 .menu__button__text {
-  display: flex;
-  max-width: 100%;
-  flex-direction: column;
-  flex-grow: 1;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  width: 70%;
 }
 .menu__button--greenblock {
   background-color: #99E2D0;
@@ -601,23 +673,19 @@ form .form__icon {
 }
 .menu__p--bold {
   font-weight: bold;
-  margin-top: 0px;
-  margin-bottom: 3px;
-  flex-grow: 1;
-  display: flex;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  text-align: start;
 }
 .menu__p--normal {
   margin: 0;
-  display: flex;
-  flex-grow: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  text-align: start;
 }
 .menu__price {
   display: flex;
@@ -687,6 +755,13 @@ form .form__icon {
 .order:active {
   background: linear-gradient(341deg, #a16be0 9%, #ff93e1 88%);
   box-shadow: 0px 0px 7px grey;
+}
+@media screen and (min-width: 992px) {
+  .order:hover {
+    background: linear-gradient(341deg, #a16be0 9%, #ff93e1 88%);
+    box-shadow: 0px 0px 7px grey;
+    transition: all 700ms;
+  }
 }
 .order__container {
   width: 100%;

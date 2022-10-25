@@ -1,5 +1,5 @@
 .wrapper{
-    animation: loader 3000ms;
+    animation: loader 3500ms;
 }
 .loadingspinner__container{
     display: flex;
@@ -96,14 +96,25 @@ form{
         font-weight: bold;
         box-shadow: $shadow-buttons;
         cursor: pointer;
-        &:hover{
+        &:active{
             background: linear-gradient(
                 341deg,
                 lighten($primarycolor, 5%) 9%,
                 lighten($secondarycolor, 5%) 88%,
-                );
+            );
+            box-shadow: 0px 0px 10px grey;
         }
-        box-shadow: 0px 0px 7px grey;
+        @media screen and (min-width: 992px) {
+            &:hover{
+                background: linear-gradient(
+                    341deg,
+                    lighten($primarycolor, 5%) 9%,
+                    lighten($secondarycolor, 5%) 88%,
+                );
+                box-shadow: 0px 0px 10px grey;
+                transition: all 1s;
+                }
+        }
     }
 }
 .howitworks{
@@ -142,11 +153,30 @@ form{
         position: relative;
         font-weight: 700;
         font-size: 14px;
+        &:active{
+            background-color: rgb(244, 237, 254);
+        }
+        &:active > .howitworks__icon{
+            color: $primarycolor;
+        }
         @media screen and (min-width: 992px) {
         width: 30%;
         height: 60px;
         font-size: 16px;
-        
+        &:hover{
+            background-color: rgb(244, 237, 254);
+            transform: scale(1.10);
+            transition: all 800ms ease-in-out;
+        }
+        &:hover > .howitworks__icon{
+            transform: rotate(1turn);
+            color: darken($primarycolor, 10%);
+            transition: all 1s 300ms;
+        }
+        &:hover > .howitworks__number{
+            transform: rotate(1turn);
+            transition: transform 1s 300ms;
+        }
         }
     }
     &__icon{
@@ -178,12 +208,6 @@ form{
             bottom: 7px;
         }
     }   
-}
-.howitworks__button:hover{
-    background-color: rgb(244, 237, 254);
-}
-.howitworks__button:hover .howitworks__icon{
-    color: $primarycolor;
 }
 
 .restaurants{
@@ -246,6 +270,16 @@ form{
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
             object-fit: cover;
+            @media screen and (min-width: 992px) {
+                &:hover + .restaurants__newtag{
+                    transform: scale(1.25);
+                    transition: all 1s ease-out;
+                    color: lighten($tertiarycolor, 20%);
+                    background-color: darken($tertiarycolor, 20%);
+                    text-shadow: 3px 3px 8px $tertiarycolor;
+
+                }    
+                }
     }
         .card__title{
             margin-top: 15px;
@@ -319,10 +353,13 @@ form{
         opacity: 0;
     }
     33%{
+        opacity: 0.1;
+    }
+    50%{
         opacity: 0.2;
     }
     75%{
-        opacity: 0.6;
+        opacity: 0.4;
     }
     100%{
         opacity: 1;

@@ -16,6 +16,13 @@
     box-sizing: border-box;
     z-index: 1;
     position: relative;
+    @media screen and (min-width: 992px) {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 20px 50px;
+    }
     margin-top: -50px; 
     &__title{
         box-sizing: border-box;
@@ -88,6 +95,10 @@
         box-sizing: border-box;
         margin-bottom: 15px;
         padding:0 20px;
+        @media screen and (min-width: 992px) {
+            width: 33%;
+        
+        }
     }
     &__button{
         width: 100%;
@@ -97,15 +108,19 @@
         border: transparent;
         box-shadow: 0px 0px 4px lightgrey;
         display: flex;
+        justify-content: space-between;
         align-items: center;
         padding-left: 10px;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
         box-sizing: border-box;
-        overflow: hidden;   
+        overflow: hidden;
         cursor: pointer;
         &__icon{
         }
         &:active > .menu__button--greenblock{ 
-            margin-right: -7px;
+            margin-right: 0px;
             transition-duration: 500ms;
             transition-timing-function: ease-in-out;
         }
@@ -113,14 +128,22 @@
             transform: rotate(1turn);
             transition: transform 400ms 200ms ease-out;
         }
+        @media screen and (min-width: 992px) {
+            &:hover > .menu__button--greenblock{
+            margin-right: 0px;
+            transition-duration: 500ms;
+            transition-timing-function: ease-in-out;
+            }
+            &:hover .menu__button--greenblock__icon{
+            transform: rotate(1turn);
+            transition: transform 400ms 200ms ease-out;
+            }
+        }
         &__text{ 
-            display: flex;
-            max-width: 100%;
-            flex-direction: column;
-            flex-grow: 1;
             overflow: hidden;
             text-overflow: ellipsis;
-            white-space: nowrap;
+            white-space: nowrap; 
+            width: 70%;
         } 
         &--greenblock{
             background-color: $tertiarycolor;
@@ -149,23 +172,19 @@
     }
     &__p--bold{
         font-weight: bold;
-        margin-top: 0px;
-        margin-bottom: 3px;
-        flex-grow: 1;
-        display: flex;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;    
+        margin-top: 0px;
+        margin-bottom: 5px;
+        text-align: start;
     }
     &__p--normal{
         margin: 0;
-        display: flex;
-        flex-grow: 1;
-        overflow: hidden;
-        text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;    
         text-overflow: ellipsis;
+        text-align: start;
         }
     &__price{
         display: flex;
@@ -220,6 +239,17 @@
         lighten($secondarycolor, 5%) 88%,
         );
         box-shadow: 0px 0px 7px grey;
+    }
+    @media screen and (min-width: 992px) {
+        &:hover{
+        background: linear-gradient(
+        341deg,
+        lighten($primarycolor, 5%) 9%,
+        lighten($secondarycolor, 5%) 88%,
+        );
+        box-shadow: 0px 0px 7px grey;
+        transition: all 700ms;
+        }
     }
     &__container{
         width: 100%;

@@ -8,6 +8,16 @@ header{
         width: 200px;
         height: 35px;
         padding-left: 35px;
+        @media screen and (min-width: 690px) and (max-width: 991px) {
+            width: 240px;
+            height: 45px;
+        
+        }
+        @media screen and (min-width: 992px){
+            height: 55px;
+            width: 280px;
+        
+        }
         }
     .header__returnarrow{
         position: absolute;
