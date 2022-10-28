@@ -28,8 +28,6 @@
         box-sizing: border-box;
         margin-right: 30px;
         padding-top: 10px;
-        padding-left: 5px;
-        font-style: italic;
         font-size: 25px;
         font-family: 'Shrikhand', cursive;
     }
@@ -116,11 +114,12 @@
         padding-bottom: 0;
         box-sizing: border-box;
         overflow: hidden;
+        font-size: 14px;
         cursor: pointer;
         &__icon{
         }
         &:active > .menu__button--greenblock{ 
-            margin-right: 0px;
+            margin-right: -1px;
             transition-duration: 500ms;
             transition-timing-function: ease-in-out;
         }
@@ -130,7 +129,7 @@
         }
         @media screen and (min-width: 992px) {
             &:hover > .menu__button--greenblock{
-            margin-right: 0px;
+            margin-right: -1px;
             transition-duration: 500ms;
             transition-timing-function: ease-in-out;
             }
@@ -156,7 +155,6 @@
             justify-content: center;
             align-items: center;
             margin-right: -70px;
-            transform: translateX(0);
             &__icon{
                 height: 25px;
                 width: 25px;

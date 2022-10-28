@@ -156,16 +156,19 @@ form .form__icon {
 .presentation__button {
   border-radius: 25px;
   border: 0px;
-  height: 40px;
+  height: 30px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 14px;
   width: 200px;
   color: white;
-  background: linear-gradient(357deg, #9356DC 40%, #FF79DA 112%);
+  background: linear-gradient(357deg, #9356DC -20%, #FF79DA 89%);
   font-weight: bold;
   box-shadow: 0px 0px 3px grey;
   cursor: pointer;
 }
 .presentation__button:active {
-  background: linear-gradient(341deg, #a16be0 9%, #ff93e1 88%);
+  background: linear-gradient(341deg, #a674e2 -20%, #ff9de4 89%);
   box-shadow: 0px 0px 10px grey;
 }
 @media screen and (min-width: 992px) {
@@ -216,7 +219,7 @@ form .form__icon {
   align-items: center;
   position: relative;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
 }
 .howitworks__button:active {
   background-color: rgb(244, 237, 254);
@@ -244,6 +247,9 @@ form .form__icon {
     transform: rotate(1turn);
     transition: transform 1s 300ms;
   }
+}
+.howitworks__p {
+  width: 170px;
 }
 .howitworks__icon {
   position: absolute;
@@ -332,6 +338,7 @@ form .form__icon {
 }
 .restaurants__card__container {
   margin-bottom: 20px;
+  position: relative;
 }
 @media screen and (min-width: 690px) and (max-width: 991px) {
   .restaurants__card__container {
@@ -532,8 +539,6 @@ form .form__icon {
   box-sizing: border-box;
   margin-right: 30px;
   padding-top: 10px;
-  padding-left: 5px;
-  font-style: italic;
   font-size: 25px;
   font-family: "Shrikhand", cursive;
 }
@@ -619,10 +624,11 @@ form .form__icon {
   padding-bottom: 0;
   box-sizing: border-box;
   overflow: hidden;
+  font-size: 14px;
   cursor: pointer;
 }
 .menu__button:active > .menu__button--greenblock {
-  margin-right: 0px;
+  margin-right: -1px;
   transition-duration: 500ms;
   transition-timing-function: ease-in-out;
 }
@@ -632,7 +638,7 @@ form .form__icon {
 }
 @media screen and (min-width: 992px) {
   .menu__button:hover > .menu__button--greenblock {
-    margin-right: 0px;
+    margin-right: -1px;
     transition-duration: 500ms;
     transition-timing-function: ease-in-out;
   }
@@ -658,7 +664,6 @@ form .form__icon {
   justify-content: center;
   align-items: center;
   margin-right: -70px;
-  transform: translateX(0);
 }
 .menu__button--greenblock__icon {
   height: 25px;
@@ -775,7 +780,6 @@ form .form__icon {
   display: flex;
   flex-direction: column;
   padding: 0 20px 30px 20px;
-  font-style: italic;
 }
 @media screen and (min-width: 992px) {
   .footer {
@@ -798,6 +802,10 @@ form .form__icon {
 .footer__icon {
   color: #FFF;
   margin-right: 5px;
+}
+.footer h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 16px;
 }
 @media screen and (min-width: 992px) {
   .footer h1 {

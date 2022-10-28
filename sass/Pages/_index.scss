@@ -89,7 +89,10 @@ form{
     &__button{
         border-radius: 25px;
         border: 0px;
-        height: 40px;
+        height: 30px;
+        padding-top: 15px;
+        text-align: center;
+        font-size: 14px;
         width: 200px;
         color: white;
         background: $gradient2;
@@ -99,8 +102,8 @@ form{
         &:active{
             background: linear-gradient(
                 341deg,
-                lighten($primarycolor, 5%) 9%,
-                lighten($secondarycolor, 5%) 88%,
+                lighten($primarycolor, 7%) -20%,
+                lighten($secondarycolor, 7%) 89%,
             );
             box-shadow: 0px 0px 10px grey;
         }
@@ -152,7 +155,7 @@ form{
         align-items: center;
         position: relative;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 16px;
         &:active{
             background-color: rgb(244, 237, 254);
         }
@@ -178,6 +181,9 @@ form{
             transition: transform 1s 300ms;
         }
         }
+    }
+    &__p{
+        width: 170px;
     }
     &__icon{
         position: absolute;
@@ -253,6 +259,7 @@ form{
         box-shadow: 0px 3px 15px lightgray;
         &__container{
             margin-bottom: 20px;
+            position: relative;
             @media screen and (min-width: 690px) and (max-width: 991px) {
                 width: 320px;
                 height: 260px;
