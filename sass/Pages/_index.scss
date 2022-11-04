@@ -144,7 +144,7 @@ form{
     &__button{
         background-color: rgb(247, 247, 246);
         width: 100%;
-        height: 50px;
+        height: 60px;
         border-radius: 15px;
         border: 0px;
         margin-bottom: 20px;
@@ -155,7 +155,7 @@ form{
         align-items: center;
         position: relative;
         font-weight: 700;
-        font-size: 16px;
+        font-size: 14px;
         &:active{
             background-color: rgb(244, 237, 254);
         }
@@ -184,11 +184,16 @@ form{
     }
     &__p{
         width: 170px;
+        padding: 5px 0;
+        @media screen and (min-width: 992px) {
+        width: 180px;    
+        }
+
     }
     &__icon{
         position: absolute;
         left: 8%;
-        bottom: 25px;
+        bottom: 30px;
         color: grey;
         @media screen and (min-width: 992px) {
         bottom: 31px;
@@ -197,13 +202,13 @@ form{
     &__number{
         position: absolute;
         background-color: $primarycolor;
-        width: 20px;
-        height: 20px;
+        width: 23px;
+        height: 23px;
         color: #FFF;
         font-size: $fontsizeregular;
         border-radius: 100px;
-        left: -10px;
-        bottom: 3px;
+        left: -13px;
+        bottom: 7px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -359,14 +364,8 @@ form{
     0%{
         opacity: 0;
     }
-    33%{
-        opacity: 0.1;
-    }
-    50%{
-        opacity: 0.2;
-    }
     75%{
-        opacity: 0.4;
+        opacity: 0;
     }
     100%{
         opacity: 1;
@@ -380,11 +379,11 @@ form{
         transform: rotate(1turn);
     }
     33%{
-        opacity: 0.8;
+        opacity: 1;
         transform: rotate(2turn);
     }
     75%{
-        opacity: 0.6;
+        opacity: 1;
         transform: rotate(4.3turn);
     }
     100%{
