@@ -5,10 +5,7 @@
     flex-direction: column;
     padding: 0 20px 30px 20px;      
     @media screen and (min-width: 992px) {
-     flex-direction: row;
-     justify-content: space-between;   
-     align-items: baseline;
-     padding: 40px 55px;
+     
     }
     &__link{
         color: inherit;
@@ -28,6 +25,19 @@
         @media screen and (min-width: 992px) {
         font-size: 25px;
         margin: 0;
+        }
+        @media screen and (min-width: 992px){
+            display: flex;
+            justify-content: center;
+            margin: 20px 0px;
+        }
+    }
+    &__container{
+        @media screen and (min-width: 992px){
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 50px;
+    
         }
     }
 }

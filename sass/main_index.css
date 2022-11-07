@@ -67,11 +67,11 @@ header .header__returnarrow {
   height: 200px;
   width: 100%;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   position: absolute;
   -webkit-animation: loaderspinner 3000ms forwards;
           animation: loaderspinner 3000ms forwards;
-  transform-origin: 50% 82%;
+  transform-origin: default;
 }
 
 .loadingspinner {
@@ -221,10 +221,10 @@ form .form__icon {
   font-weight: 700;
   font-size: 14px;
 }
-.howitworks__button:active {
+.howitworks__button:hover {
   background-color: rgb(244, 237, 254);
 }
-.howitworks__button:active > .howitworks__icon {
+.howitworks__button:hover > .howitworks__icon {
   color: #9356DC;
 }
 @media screen and (min-width: 992px) {
@@ -399,10 +399,10 @@ form .form__icon {
   transition: opacity 250ms;
   cursor: pointer;
 }
-.restaurants .card__icon:active {
+.restaurants .card__icon:hover {
   opacity: 0;
 }
-.restaurants .card__icon:active + .card__icon2 {
+.restaurants .card__icon:hover + .card__icon2 {
   opacity: 1;
 }
 .restaurants .card__icon2 {
@@ -548,10 +548,10 @@ form .form__icon {
   transition: opacity 250ms;
   cursor: pointer;
 }
-.menu__icon__1:active {
+.menu__icon__1:hover {
   opacity: 0;
 }
-.menu__icon__1:active + .menu__icon__2 {
+.menu__icon__1:hover + .menu__icon__2 {
   opacity: 1;
 }
 .menu__icon__2 {
@@ -623,12 +623,12 @@ form .form__icon {
 }
 .menu__button:active > .menu__button--greenblock {
   margin-right: -1px;
-  transition-duration: 500ms;
+  transition-duration: 800ms;
   transition-timing-function: ease-in-out;
 }
 .menu__button:active .menu__button--greenblock__icon {
   transform: rotate(1turn);
-  transition: transform 400ms 200ms ease-out;
+  transition: transform 600ms 200ms ease-out;
 }
 @media screen and (min-width: 992px) {
   .menu__button:hover > .menu__button--greenblock {
@@ -775,14 +775,6 @@ form .form__icon {
   flex-direction: column;
   padding: 0 20px 30px 20px;
 }
-@media screen and (min-width: 992px) {
-  .footer {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 40px 55px;
-  }
-}
 .footer__link {
   color: inherit;
   font-size: 15px;
@@ -805,5 +797,19 @@ form .form__icon {
   .footer h1 {
     font-size: 25px;
     margin: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .footer h1 {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
   }
 }/*# sourceMappingURL=main_index.css.map */

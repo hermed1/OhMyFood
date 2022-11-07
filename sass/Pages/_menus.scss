@@ -43,7 +43,7 @@
         transition: opacity 250ms;
         cursor: pointer;
     }
-    &__icon__1:active{
+    &__icon__1:hover{
         opacity: 0;
         & + .menu__icon__2{
             opacity: 1;
@@ -120,12 +120,12 @@
         }
         &:active > .menu__button--greenblock{ 
             margin-right: -1px;
-            transition-duration: 500ms;
+            transition-duration: 800ms;
             transition-timing-function: ease-in-out;
         }
         &:active .menu__button--greenblock__icon{
             transform: rotate(1turn);
-            transition: transform 400ms 200ms ease-out;
+            transition: transform 600ms 200ms ease-out;
         }
         @media screen and (min-width: 992px) {
             &:hover > .menu__button--greenblock{
